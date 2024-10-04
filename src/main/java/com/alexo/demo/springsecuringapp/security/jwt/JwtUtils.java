@@ -17,9 +17,9 @@ import java.util.Date;
 public class JwtUtils {
     private static Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("spring.secure.app.jwtSecret")
+    @Value("${spring.secure.app.jwtSecret}")
     private String jwtSecret;
-    @Value("spring.secure.app.jwtExpirationInMs")
+    @Value("${spring.secure.app.jwtExpirationInMs}")
     private int jwtExpirationInMs;
 
     public String generateJwtToken(Authentication authentication) {
